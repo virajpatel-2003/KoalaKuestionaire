@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Survey</title>
+</head>
+<body>
+<h1>Create a Survey</h1>
+<form action="/make" method="post" th:object="${survey}">
+    <label for="title">Survey Title:</label>
+    <input type="text" id="title" name="title" th:field="*{title}" required />
+    <br />
+    <label for="description">Survey Description:</label>
+    <textarea id="description" name="description" th:field="*{description}" required></textarea>
+    <br />
+    <button type="submit">Create Survey</button>
+</form>
+</body>
+</html>

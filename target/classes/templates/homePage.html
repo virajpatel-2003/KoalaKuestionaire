@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+<h1>Welcome to KoalaKuest</h1>
+
+<!-- Login Form -->
+<div id="login-form">
+    <form hx-post="/login" hx-target="#login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    <!-- Sign Up Button -->
+    <button hx-get="/register" hx-target="body">Sign Up</button>
+</div>
+</body>
+</html>
